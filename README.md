@@ -1,2 +1,2 @@
 # graylog-sekoia
-Intégration de l'API SEKOIA.IO dans Graylog
+Documenation sur l'intégration de l'API SEKOIA.IO dans Graylog

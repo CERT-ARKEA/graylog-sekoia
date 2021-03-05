@@ -1,0 +1,49 @@
+Data adapters
+=============
+
+
+Ajout d'un data adapter
+-----------------------
+
+Dans le menu System:
+
+* Sélectionnez "Lookup Tables"
+
+    .. figure:: menu1.png
+          :width: 10%
+
+* Puis "Data Adapters" à droite
+
+    .. figure:: menu2.png
+               :width: 30%
+
+* Sélectionnez "Create data adapter"
+
+    .. figure:: menu2-b.png
+               :width: 50%
+
+
+* Sélectionnez dans "Data Adapter Type", le type "HTTP JSONPath"
+
+    .. figure:: menu3.png
+               :width: 50%
+
+Remplissez les champs du formulaire (laissez par défaut les autres champs) :
+
+* Title :  ``SEKOIA CTI``
+
+* Description : ``Lookup SEKOIA CTI``
+
+* Name :  ``sekoia-cti``
+
+* Lookup URL : ``https://api.sekoia.io/v2/inthreat/indicators?type=ipv4-addr&value=${key}``
+
+* Single value JSONPath : ``$.items[0].indicator_types[0]``
+
+* HTTP Headers: Name  ``Authorization`` Value ``Bearer votre_clé-d_api`` puis Add
+
+    .. figure:: menu6.png
+                :width: 70%
+
+
+

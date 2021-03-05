@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Pipelines &mdash; Documentation Sekoia TI Graylog integration 0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="Streams" href="stream.html" />
+    <link rel="prev" title="Lookup Table" href="lookuptable.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Sekoia TI Graylog integration
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Sommaire:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sources.html">Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Pré-requis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataadapters.html">Data adapters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cache.html">Cache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lookuptable.html">Lookup Table</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pipelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ajout-d-un-pipeline">Ajout d’un pipeline</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="stream.html">Streams</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sekoia TI Graylog integration</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Pipelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pipelines">
+<h1>Pipelines<a class="headerlink" href="#pipelines" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="ajout-d-un-pipeline">
+<h2>Ajout d’un pipeline<a class="headerlink" href="#ajout-d-un-pipeline" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le menu System:</p>
+<ul>
+<li><p>Sélectionnez « Pipelines »</p>
+<blockquote>
+<div><div class="figure align-default">
+<a class="reference internal image-reference" href="_images/menu1.png"><img alt="_images/menu1.png" src="_images/menu1.png" style="width: 10%;" /></a>
+</div>
+</div></blockquote>
+</li>
+<li><p>Puis « Manage pipelines » à droite</p>
+<blockquote>
+<div><div class="figure align-default">
+<a class="reference internal image-reference" href="_images/menupipelines.png"><img alt="_images/menupipelines.png" src="_images/menupipelines.png" style="width: 30%;" /></a>
+</div>
+</div></blockquote>
+</li>
+<li><p>Sélectionnez « Add new pipeline »</p></li>
+</ul>
+<p>Remplissez les champs du formulaire :</p>
+<ul>
+<li><p>Title :  <code class="docutils literal notranslate"><span class="pre">Sekoia</span> <span class="pre">CTI</span> <span class="pre">Pipeline</span></code></p></li>
+<li><p>Description : <code class="docutils literal notranslate"><span class="pre">Pipeline</span> <span class="pre">SEKOIA</span> <span class="pre">CTI</span></code></p></li>
+<li><p>Sélectionnez « Edit connexions »</p></li>
+<li><p>Choisissez votre « stream » de logs</p></li>
+<li><p>Sélectionnez « Manage rules » en haut, à droite</p>
+<blockquote>
+<div><div class="figure align-default">
+<a class="reference internal image-reference" href="_images/menupipelines.png"><img alt="_images/menupipelines.png" src="_images/menupipelines.png" style="width: 30%;" /></a>
+</div>
+</div></blockquote>
+</li>
+<li><p>Cliquez sur « Create Rule »</p></li>
+</ul>
+<p>Remplissez les champs du formulaire :</p>
+<ul>
+<li><p>Description : <code class="docutils literal notranslate"><span class="pre">SEKOIA</span> <span class="pre">CTI</span> <span class="pre">Rule</span></code></p></li>
+<li><p>Ajout d’une Rule source :</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Les champs dépendent de votre configuration.
+Le champ « dst_ip » est à modifier suivant le nom que vous avez attribué a l’information « ip destination » dans votre « stream » de logs</p>
+</div>
+</li>
+<li><p>Rule source</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>rule &quot;Sekoia lookup&quot;
+when has_field(&quot;dst_ip&quot;)
+then
+let DstIP = to_string($message.dst_ip);
+let indicatorType = lookup_value(&quot;sekoia-cti-lookup&quot;, DstIP);
+set_field(&quot;indicator_type&quot;, indicatorType);
+end
+</pre></div>
+</div>
+</li>
+<li><p>Cliquez sur « Apply » puis « Save &amp; Close »</p></li>
+<li><p>Retournez sur « Manage pipelines »</p>
+<blockquote>
+<div><div class="figure align-default">
+<a class="reference internal image-reference" href="_images/menupipelines.png"><img alt="_images/menupipelines.png" src="_images/menupipelines.png" style="width: 30%;" /></a>
+</div>
+</div></blockquote>
+</li>
+<li><p>Editez (edit) votre Pipeline <code class="docutils literal notranslate"><span class="pre">Sekoia</span> <span class="pre">CTI</span> <span class="pre">Pipeline</span></code></p></li>
+<li><p>Editez le « Stage 0 »</p>
+<blockquote>
+<div><div class="figure align-default">
+<a class="reference internal image-reference" href="_images/menustageedit.png"><img alt="_images/menustageedit.png" src="_images/menustageedit.png" style="width: 90%;" /></a>
+</div>
+</div></blockquote>
+</li>
+<li><p>Ajoutez à « Stage Rules » votre « Rule » <code class="docutils literal notranslate"><span class="pre">Sekoia</span> <span class="pre">lookup</span></code></p>
+<blockquote>
+<div><div class="figure align-default">
+<a class="reference internal image-reference" href="_images/menustage.png"><img alt="_images/menustage.png" src="_images/menustage.png" style="width: 50%;" /></a>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="stream.html" class="btn btn-neutral float-right" title="Streams" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="lookuptable.html" class="btn btn-neutral float-left" title="Lookup Table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, CERT Arkea.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

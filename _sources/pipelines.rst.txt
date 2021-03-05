@@ -1,0 +1,83 @@
+Pipelines
+=========
+
+
+Ajout d'un pipeline
+-------------------
+
+Dans le menu System:
+
+* Sélectionnez "Pipelines"
+
+    .. figure:: menu1.png
+          :width: 10%
+
+* Puis "Manage pipelines" à droite
+
+    .. figure:: menupipelines.png
+               :width: 30%
+
+* Sélectionnez "Add new pipeline"
+
+
+Remplissez les champs du formulaire :
+
+* Title :  ``Sekoia CTI Pipeline``
+
+* Description : ``Pipeline SEKOIA CTI``
+
+
+* Sélectionnez "Edit connexions"
+
+* Choisissez votre "stream" de logs
+
+* Sélectionnez "Manage rules" en haut, à droite
+
+      .. figure:: menupipelines.png
+                     :width: 30%
+
+* Cliquez sur "Create Rule"
+
+Remplissez les champs du formulaire :
+
+* Description : ``SEKOIA CTI Rule``
+
+* Ajout d'une Rule source :
+
+  .. warning:: Les champs dépendent de votre configuration.
+               Le champ "dst_ip" est à modifier suivant le nom que vous avez attribué a l'information "ip destination" dans votre "stream" de logs
+
+
+* Rule source ::
+
+   rule "Sekoia lookup"
+   when has_field("dst_ip")
+   then
+   let DstIP = to_string($message.dst_ip);
+   let indicatorType = lookup_value("sekoia-cti-lookup", DstIP);
+   set_field("indicator_type", indicatorType);
+   end
+
+
+* Cliquez sur "Apply" puis "Save & Close"
+
+
+* Retournez sur "Manage pipelines" 
+
+      .. figure:: menupipelines.png
+                     :width: 30%
+
+
+* Editez (edit) votre Pipeline ``Sekoia CTI Pipeline``
+
+* Editez le "Stage 0"
+
+      .. figure:: menustageedit.png
+                     :width: 90%
+
+* Ajoutez à "Stage Rules" votre "Rule" ``Sekoia lookup``
+
+       .. figure:: menustage.png
+                     :width: 50%
+
+

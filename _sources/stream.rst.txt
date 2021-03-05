@@ -1,0 +1,19 @@
+Streams
+=======
+
+
+Vérification de l'ajout de champ
+--------------------------------
+
+Dans le menu Stream, sélectionnez le stream associé au Pipeline SEKOIA, puis recherchez le champ ``indicator_type`` :
+
+
+    .. figure:: streamsearch.png
+          :width: 70%
+
+* Les messages contiennent désormais un champ spécifique ``indicator_type`` quand l'IP est connue dans le CTI SEKOIA :
+
+    .. figure:: indicator.png
+               :width: 80%
+
+

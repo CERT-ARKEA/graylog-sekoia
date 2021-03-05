@@ -1,0 +1,17 @@
+Pré-requis
+==========
+
+
+Clé d'API
+---------
+
+* Vous devez préalablement générer une clé d'API dans votre interface SEKOIA.IO
+
+      .. figure:: sekoiaapikey.png
+                :width: 70%
+
+* Affectez à cette clé les droits "ReadOnly" sur l'IntelligenceCenter
+
+      .. figure:: sekoiaapikey2.png
+                        :width: 60%
+

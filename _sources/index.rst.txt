@@ -1,0 +1,39 @@
+.. Sekoia integration documentation master file, created by
+   sphinx-quickstart on Thu Mar  4 19:01:54 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+
+Intégration de l'API SEKOIA TI dans Graylog
+============================================
+
+|Twitter| |Github|
+
+.. warning:: Cette documentation fournit les indications nécessaires à la création d'un "lookup" dans Graylog appelant l'api SEKOIA Threat Intelligence.
+
+   L'exemple fourni vérifie si une adresse IPv4 est présente en tant qu'indicateur de compromission (STIX v2 indicator-label-ov)
+
+   Nécessite une souscripton à l'offre CTI de SEKOIA.IO
+
+
+   .. figure:: sekoia_io_logo.png
+      :width: 50%
+
+.. toctree::
+   :maxdepth: 6
+   :caption: Sommaire:
+
+
+   ./sources.rst
+   ./requirements.rst
+   ./dataadapters.rst
+   ./cache.rst
+   ./lookuptable.rst
+   ./pipelines.rst
+   ./stream.rst
+
+.. |Twitter| image:: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
+   :target: https://twitter.com/certarkea
+.. |Github| image:: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+   :target: https://github.com/CERT-ARKEA
+

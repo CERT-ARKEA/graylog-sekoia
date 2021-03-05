@@ -1,0 +1,41 @@
+Lookup Table
+============
+
+
+Ajout d'une Lookup Table
+------------------------
+
+Dans le menu System:
+
+* Sélectionnez "Lookup Tables"
+
+    .. figure:: menu1.png
+          :width: 10%
+
+* Puis "Lookup Tables" à droite
+
+    .. figure:: menu2.png
+               :width: 30%
+
+* Sélectionnez "Create lookup table"
+
+    .. figure:: lookupmenu.png
+               :width: 50%
+
+
+Remplissez les champs du formulaire (laissez par défaut les autres champs) :
+
+* Title :  ``SEKOIA CTI``
+
+* Description : ``Lookup SEKOIA CTI``
+
+* Name :  ``sekoia-cti-lookup``
+
+* Data Adapter : sélectionnez le data adapter  ``sekoia-cti``
+
+* Cache : sélectionnez le cache ``sekoia-cti-cache``
+
+* Cliquez sur "Create Lookup Table"
+
+
+

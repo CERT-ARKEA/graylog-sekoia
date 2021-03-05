@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Intégration de l’API SEKOIA TI dans Graylog &mdash; Documentation Sekoia TI Graylog integration 0.1</title>
+  <title>Recherche &mdash; Documentation Sekoia TI Graylog integration 0.1</title>
   
 
   
@@ -23,6 +23,7 @@
   
 
   
+    
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -37,9 +38,10 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
+    <script type="text/javascript" src="_static/searchtools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Sources" href="sources.html" /> 
+    <link rel="search" title="Recherche" href="#" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -53,7 +55,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Sekoia TI Graylog integration
+            <a href="index.html" class="icon icon-home"> Sekoia TI Graylog integration
           
 
           
@@ -66,7 +68,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="#" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -108,7 +110,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Sekoia TI Graylog integration</a>
+          <a href="index.html">Sekoia TI Graylog integration</a>
         
       </nav>
 
@@ -139,14 +141,12 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Intégration de l’API SEKOIA TI dans Graylog</li>
+      <li>Recherche</li>
     
     
       <li class="wy-breadcrumbs-aside">
-        
-          
         
       </li>
     
@@ -158,58 +158,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="integration-de-l-api-sekoia-ti-dans-graylog">
-<h1>Intégration de l’API SEKOIA TI dans Graylog<a class="headerlink" href="#integration-de-l-api-sekoia-ti-dans-graylog" title="Lien permanent vers ce titre">¶</a></h1>
-<p><a class="reference external" href="https://twitter.com/certarkea"><img alt="Twitter" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&amp;logo=twitter&amp;logoColor=white" /></a> <a class="reference external" href="https://github.com/CERT-ARKEA"><img alt="Github" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white" /></a></p>
-<div class="admonition warning">
-<p class="admonition-title">Avertissement</p>
-<p>Cette documentation fournit les indications nécessaires à la création d’un « lookup » dans Graylog appelant l’api SEKOIA Threat Intelligence.</p>
-<p>L’exemple fourni vérifie si une adresse IPv4 est présente en tant qu’indicateur de compromission (STIX v2 indicator-label-ov)</p>
-<p>Nécessite une souscripton à l’offre CTI de SEKOIA.IO</p>
-<div class="figure align-default">
-<a class="reference internal image-reference" href="_images/sekoia_io_logo.png"><img alt="_images/sekoia_io_logo.png" src="_images/sekoia_io_logo.png" style="width: 50%;" /></a>
-</div>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Sommaire:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="sources.html">Sources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Pré-requis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="requirements.html#cle-d-api">Clé d’API</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="dataadapters.html">Data adapters</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="dataadapters.html#ajout-d-un-data-adapter">Ajout d’un data adapter</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cache.html">Cache</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cache.html#ajout-d-un-cache">Ajout d’un cache</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="lookuptable.html">Lookup Table</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="lookuptable.html#ajout-d-une-lookup-table">Ajout d’une Lookup Table</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="pipelines.html">Pipelines</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pipelines.html#ajout-d-un-pipeline">Ajout d’un pipeline</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="stream.html">Streams</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="stream.html#verification-de-l-ajout-de-champ">Vérification de l’ajout de champ</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
+  <noscript>
+  <div id="fallback" class="admonition warning">
+    <p class="last">
+      Please activate JavaScript to enable the search functionality.
+    </p>
+  </div>
+  </noscript>
 
+  
+  <div id="search-results">
+  
+  </div>
 
            </div>
            
           </div>
           <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="sources.html" class="btn btn-neutral float-right" title="Sources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
 
   <hr/>
 
@@ -246,7 +211,14 @@
   
   
     
+  
+  <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+  
+  <script type="text/javascript" id="searchindexloader"></script>
    
+
 
 </body>
 </html>

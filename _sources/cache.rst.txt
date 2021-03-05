@@ -1,0 +1,45 @@
+Cache
+=====
+
+
+Ajout d'un cache
+----------------
+
+Dans le menu System:
+
+* Sélectionnez "Lookup Tables"
+
+    .. figure:: menu1.png
+          :width: 10%
+
+* Puis "Caches" à droite
+
+    .. figure:: menu2.png
+               :width: 30%
+
+* Sélectionnez "Create cache"
+
+    .. figure:: menuc1.png
+               :width: 60%
+
+
+* Sélectionnez dans "Cache Type", le type "Node-local, in memory cache"
+
+    .. figure:: menuc2.png
+               :width: 70%
+
+Remplissez les champs du formulaire (laissez par défaut les autres champs) :
+
+* Title :  ``SEKOIA CTI CACHE``
+
+* Description : ``Cache SEKOIA CTI``
+
+* Name :  ``sekoia-cti-cache``
+
+* Maximum entries : ``1000``
+
+* Expire after access : ``3600 seconds``
+
+Cliquez sur "Create Cache"
+
+
